@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SupportHero() {
+function Hero() {
     return (
        <section className='container-fluid' id='supportHero'>
         <div className='p-3' id='supportWrapper'>
@@ -32,4 +32,4 @@ function SupportHero() {
       );
 }
 
-export default SupportHero;
+export default Hero;
