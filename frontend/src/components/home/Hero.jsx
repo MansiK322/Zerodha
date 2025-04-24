@@ -1,7 +1,8 @@
 import React from 'react';
-import Img from '../assets/homeHero.png';
+import Img from "../../assets/homehero.png";
 
-function HeroHome(){
+
+function Hero(){
     return(
         <div className='container p-5 mb-5'>
             <div className='row text-center'>
@@ -13,4 +14,4 @@ function HeroHome(){
         </div>
     );
 }
-export default HeroHome;
+export default Hero;
