@@ -40,6 +40,10 @@ app.post("/newOrder", async (req, res) => {
   res.send("Order saved!");
 });
 
+app.get("/",(req,res) => {
+  res.send("Api Working");
+});
+
 app.listen(PORT, () => {
   console.log(`App started in ${PORT}`);
   mongoose.connect(uri);
