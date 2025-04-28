@@ -1,13 +1,29 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Funds = () => {
+  const navigate = useNavigate(); // Hook to navigate programmatically
+
+  const handleAddFunds = () => {
+    // Navigate to add funds page
+    navigate('/funds/add-funds');
+  };
+
+  const handleWithdrawFunds = () => {
+    // Navigate to withdraw page
+    navigate('/funds/withdraw');
+  };
+
   return (
     <>
       <div className="funds">
-        <p>Instant, zero-cost fund transfers with UPI </p>
-        <Link className="btn btn-green">Add funds</Link>
-        <Link className="btn btn-blue">Withdraw</Link>
+        <p>Instant, zero-cost fund transfers with UPI</p>
+        <button className="btn btn-green" onClick={handleAddFunds}>
+          Add funds
+        </button>
+        <button className="btn btn-blue" onClick={handleWithdrawFunds}>
+          Withdraw
+        </button>
       </div>
 
       <div className="row">
@@ -77,7 +93,7 @@ const Funds = () => {
         <div className="col">
           <div className="commodity">
             <p>You don't have a commodity account</p>
-            <Link className="btn btn-blue">Open Account</Link>
+            <button className="btn btn-blue">Open Account</button>
           </div>
         </div>
       </div>
