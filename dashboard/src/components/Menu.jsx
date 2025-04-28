@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import logo from "../assets/logo.svg"; // Correct import of the logo
 import { Link } from "react-router-dom";
 
 const Menu = () => {
@@ -10,7 +10,7 @@ const Menu = () => {
     setSelectedMenu(index);
   };
 
-  const handleProfileClick = (index) => {
+  const handleProfileClick = () => {
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
   };
 
@@ -19,7 +19,7 @@ const Menu = () => {
 
   return (
     <div className="menu-container">
-      <img src="logo.png" style={{ width: "50px" }} />
+      <img src={logo} alt="Logo" style={{ width: "50px" }} /> {/* Corrected image reference */}
       <div className="menus">
         <ul>
           <li>
@@ -69,22 +69,11 @@ const Menu = () => {
           <li>
             <Link
               style={{ textDecoration: "none" }}
-              to="funds"
+              to="/funds"
               onClick={() => handleMenuClick(4)}
             >
               <p className={selectedMenu === 4 ? activeMenuClass : menuClass}>
                 Funds
-              </p>
-            </Link>
-          </li>
-          <li>
-            <Link
-              style={{ textDecoration: "none" }}
-              to="/apps"
-              onClick={() => handleMenuClick(6)}
-            >
-              <p className={selectedMenu === 6 ? activeMenuClass : menuClass}>
-                Apps
               </p>
             </Link>
           </li>
