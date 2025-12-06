@@ -55,7 +55,6 @@ app.post("/newOrder", async (req, res) => {
   }
 });
 
-<<<<<<< HEAD
 app.get("/",(req,res) => {
   res.send("Api Working");
 });
@@ -65,16 +64,3 @@ app.listen(PORT, () => {
   mongoose.connect(uri);
   console.log("DB started!");
 });
-=======
-// Database connection and server start
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => {
-    console.log("DB connected successfully!");
-    app.listen(PORT, () => {
-      console.log(`App started on port ${PORT}`);
-    });
-  })
-  .catch((error) => {
-    console.error("DB connection error:", error.message);
-});
->>>>>>> f1204258f27cec8c9856589bd17c11309f83d93e

@@ -1,9 +1,8 @@
 import React from 'react';
-import Img from "../../assets/homehero.png";
+import Img from "../../assets/homeHero.png";
 
 
-function Hero(){
-    return(
+function Hero(){   return(
         <div className='container p-5 mb-5'>
             <div className='row text-center'>
                 <img src={Img} alt='Hero Image' className='mb-5' />
